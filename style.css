@@ -1,0 +1,370 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  background-color: hsl(270, 20%, 96%);
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.app-container {
+  width: 95%;
+  height: 100%;
+  margin: auto;
+  padding: 50px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.chat-wrapper {
+  width: 40%;
+  height: 100%;
+  margin: auto;
+  border: 20px solid hsl(0, 0%, 100%);
+  border-radius: 50px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+.chat-wrapper .circle {
+  width: 50%;
+  height: 40px;
+  margin: auto auto;
+  background-color: #fff;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  text-align: center;
+  position: relative;
+  top: 0px;
+  z-index: 1;
+}
+
+.chat-header {
+  width: 100%;
+  height: 100%;
+  padding: 70px 0px 40px 0px;
+  background: linear-gradient(
+    to left,
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 61%)
+  );
+  position: relative;
+  top: -40px;
+  z-index: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+.indent {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.left-arrow {
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.avater {
+  width: 40px;
+  height: 40px;
+  border: 2px solid white;
+  border-radius: 50px;
+}
+
+.header-name-wrapper {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.header-name-wrapper h1 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: hsl(0, 0%, 100%);
+}
+
+.header-name-wrapper p {
+  color: hsl(276, 100%, 81%);
+  margin-top: 0px;
+}
+
+.dot-wrapper {
+  cursor: pointer;
+}
+
+.dot-wrapper .dot {
+  width: 7px;
+  height: 7px;
+  margin-top: 5px;
+  background: #fff;
+  border-radius: 50px;
+}
+
+.chat-type-wrapper {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-type-wrapper .left {
+  align-self: flex-start;
+  justify-self: flex-start;
+  width: 55%;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.chat-left {
+  height: 1fr;
+  background-color: hsla(273, 44%, 90%, 0.89);
+  color: hsl(276, 55%, 52%);
+  margin-bottom: 15px;
+}
+
+.margin {
+  margin-bottom: 0px;
+}
+
+.chat-type-wrapper .right {
+  align-self: flex-end;
+  justify-self: flex-end;
+  text-align: right;
+  color: hsl(271, 15%, 43%);
+  width: 55%;
+  margin: 5px 0px 5px 0px;
+}
+
+.right p {
+  padding: 10px;
+  height: 1fr;
+  background-color: hsl(0, 0%, 100%);
+  width: 90%;
+  margin: 15px 0px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+  text-align: left;
+}
+
+.first-dog,
+.second-dog,
+.third-dog {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  margin-right: 5px;
+}
+
+label {
+  margin-top: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: whitesmoke;
+  background: linear-gradient(
+    to left,
+    hsl(264, 100%, 61%),
+    hsl(293, 100%, 63%)
+  );
+}
+
+label .cir {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid hsl(289, 100%, 72%);
+  border-radius: 10px;
+  text-align: center;
+  margin-right: 5px;
+}
+
+label .checkmark {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-color: #fff;
+  border-radius: 10px;
+  opacity: 0;
+  transition: 2s;
+}
+
+label .price {
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+}
+
+label input {
+  display: none;
+}
+
+label input:checked + span > .cir > .checkmark {
+  opacity: 1;
+}
+
+.input-text {
+  width: 90%;
+  margin: 20px auto;
+  position: relative;
+  text-align: center;
+}
+
+.input-text input {
+  width: 95%;
+  height: 50px;
+  margin: auto auto;
+  border-radius: 30px;
+  background-color: hsl(0, 0%, 100%);
+  border: none;
+  outline: none;
+  color: hsl(270, 7%, 64%);
+  margin: auto auto;
+  font-size: 16px;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+  padding-left: 5%;
+}
+
+.input-text::after {
+  content: " ";
+  background-image: url(./images/icon-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: 13px;
+  background-color: hsl(271, 36%, 24%);
+  border-radius: 100px;
+  padding: 3px 3px;
+  cursor: pointer;
+  position: absolute;
+  height: 50%;
+  width: 30px;
+  top: 19%;
+  left: 85%;
+}
+
+.input-text input::placeholder {
+  color: hsl(206, 6%, 79%);
+}
+
+.booking-wrapper {
+  width: 40%;
+  text-align: justify;
+  margin: auto auto;
+  color: hsl(270, 7%, 64%);
+}
+
+.booking-wrapper h2 {
+  font-size: 45px;
+  color: hsl(271, 36%, 24%);
+  font-weight: 700;
+}
+
+.booking-wrapper p {
+  margin-top: 40px;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+
+@media screen and (max-width: 915px) {
+  .app-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .chat-wrapper {
+    width: 85%;
+  }
+
+  .booking-wrapper {
+    width: 90%;
+    text-align: center;
+    margin: 40px auto;
+  }
+  .booking-wrapper h2 {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .chat-wrapper {
+    border: 15px solid hsl(0, 0%, 100%);
+  }
+  .chat-wrapper .circle {
+    width: 55%;
+    height: 30px;
+  }
+  .chat-header {
+    top: -30px;
+    padding: 50px 0px 20px 0px;
+  }
+
+  .indent {
+    width: 90%;
+  }
+
+  .left-arrow {
+    margin-bottom: 8px;
+  }
+
+  .avater {
+    width: 35px;
+    height: 35px;
+  }
+
+  .header-name-wrapper h1 {
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+
+  .header-name-wrapper p {
+    font-size: 12px;
+  }
+
+  .dot-wrapper .dot {
+    width: 5px;
+    height: 5px;
+  }
+  .chat-type-wrapper .left {
+    width: 70%;
+  }
+
+  .chat-type-wrapper .right {
+    width: 70%;
+  }
+  .first-dog,
+  .second-dog,
+  .third-dog {
+    width: 50px;
+    height: 50px;
+  }
+  .input-text::after {
+    left: 82%;
+  }
+  .booking-wrapper h2 {
+    font-size: 30px;
+  }
+}

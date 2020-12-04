@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./font.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Chat App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="app-container">
+        <div class="chat-wrapper">
+          <div class="circle"></div>
+          <div class="chat-header">
+            <div class="indent">
+              <div class="header-image-wrapper">
+                <img src="./images/icon-angle-left.svg" class="left-arrow" />
+                <img src="./images/avatar.jpg" class="avater" />
+
+                <div class="header-name-wrapper">
+                  <h1>Samuel Green</h1>
+                  <p>Available to Walk</p>
+                </div>
+              </div>
+              <div class="dot-wrapper">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+            </div>
+          </div>
+          <div class="chat-type-wrapper">
+            <p class="left chat-left">
+              That sounds great. I’d be happy with that.
+            </p>
+            <p class="left chat-left">
+              Could you send over some pictures of your dog, please?
+            </p>
+            <div class="dogs-wrapper right">
+              <img src="./images/dog-image-1.jpg" class="first-dog" />
+              <img src="./images/dog-image-2.jpg" class="second-dog" />
+              <img src="./images/dog-image-3.jpg" class="third-dog" />
+              <p>Here are a few pictures. She’s a happy girl!</p>
+              <p>Can you make it?</p>
+            </div>
+            <p class="left chat-left margin">
+              She looks so happy! The time we discussed works. How long shall I
+              take her out for?
+            </p>
+            <br /><br />
+            <label class="left">
+              <input type="radio" class="radio" name="price" /><span
+                ><span class="cir"><span class="checkmark"></span></span>30
+                minute walk</span
+              ><span class="price">$29</span></label
+            ><br />
+            <label class="left">
+              <input type="radio" class="radio" name="price" /><span
+                ><span class="cir"><span class="checkmark"></span></span>1 hour
+                walk</span
+              ><span class="price">$49</span></label
+            ><br />
+          </div>
+          <div class="input-text">
+            <input type="text" placeholder=" Type a message…" />
+          </div>
+        </div>
+        <div class="booking-wrapper">
+          <h2>Simple booking</h2>
+          <p>
+            Stay in touch with our dog walkers through the chat interface. This
+            makes it easy to discuss arrangements and make bookings. Once the
+            walk has been completed you can rate your walker and book again all
+            through the chat.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
